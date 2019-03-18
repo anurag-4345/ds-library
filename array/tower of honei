@@ -1,0 +1,25 @@
+#include<conio.h>
+#include<stdio.h>
+void tower(int,char,char,char); 
+
+int main()
+{
+int num;
+printf("Enter the number of disk : ");
+scanf("%d",&num);
+printf("the squence of move involved in tower of honei");
+tower(num,'a','c','b');
+return 0;
+}
+
+void tower(int num,char beg,char end,char aux)
+{
+if(num == 1)
+ {
+ printf("move disk 1 from peg %c to peg %c",beg,end);
+  return;
+ }
+tower(num-1,beg,aux,end);
+printf("move disk %d from peg %c to peg %c",num,beg,eng);
+tower (num-1,aux,end,beg);
+}
